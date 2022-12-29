@@ -36,7 +36,6 @@ dimensions = {
     'height':660,
 }
 
-cap = cv2.VideoCapture(1)
 while True:
     scr = numpy.array(sct.grab(dimensions))
     scr_gray = cv2.cvtColor(scr, cv2.COLOR_BGR2GRAY)
@@ -47,7 +46,6 @@ while True:
     cv2.imshow('grayscale', cv2.cvtColor(scr, cv2.COLOR_BGR2GRAY))
     # cv2.imshow('clears_0', clears_0)
     # cv2.imshow('scr_rmove',scr_remove)
-    cv2.matchTemplate(scr_gray,)
 
     result_0 = cv2.matchTemplate(scr_gray, clears_0, cv2.TM_CCOEFF_NORMED)
     result_1 = cv2.matchTemplate(scr_gray, clears_1, cv2.TM_CCOEFF_NORMED)
